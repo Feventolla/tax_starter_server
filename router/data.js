@@ -19,7 +19,6 @@ router.get("/data/:hs_code", async function (req, res, next) {
   try {
     const data = await collection.findOne({ HS_code: req.params.hs_code });
     res.json(data);
-    console.log(res.json(data));
   } catch (err) {
     return next(err);
   }
